@@ -1,5 +1,5 @@
 import pandas as pd
-
+import numpy as np
 
 def main():
     #txtファイルの読み込み
@@ -7,6 +7,7 @@ def main():
     #数字と文字を分離する. 
     df = df.iloc[:,0].str.split(":", expand=True)
     df.columns = ["number", "word"]
+    df["number"] = df["number"].astype(np.int16)
     #数字と文字がセットである行だけをピックアップし, ソートする.
     number_word_df = df.iloc[:-1,:].sort_values("number")
     #インデックスの振り直し
