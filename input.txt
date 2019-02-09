@@ -1,0 +1,7 @@
+5:buzz
+100:fizz
+8:hoge
+2:huga
+20:numa
+150:kami
+1200
